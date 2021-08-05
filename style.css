@@ -9,6 +9,11 @@ body {
   background-color: #ffffff;
   font-family: 'Manrope', sans-serif;
 }
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
 
 /*==== Header section ======*/
 header {
@@ -25,10 +30,15 @@ nav {
 .blog_details {
   margin-bottom: 3rem;
 }
-.blog_post img {
+.cover_img {
   max-width: 100%;
-  padding-bottom: 1rem;
-  max-height: 100%;
+  margin-bottom: 1rem;
+  max-height: 30rem;
+  border-radius: 5px;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 3rem;
 }
 main {
   padding: 0 1rem;
@@ -43,11 +53,109 @@ main {
   align-items: center;
   margin-top: 1rem;
 }
+.author div {
+  margin-left: 15px;
+}
 .author img {
-  width: 4.5rem;
-  padding-right: 1rem;
+  width: 3.5rem;
   padding-bottom: 0;
+  border-radius: 50%;
+}
+.author span {
+  color: rgb(122, 117, 117);
 }
 footer {
   padding: 1rem 1rem 1.5rem;
+}
+
+/****** media queries *****/
+@media only screen and (min-width: 768px) {
+  header {
+    align-items: center;
+  }
+  header,
+  main {
+    margin-left: 1.7rem;
+    margin-right: 1.7rem;
+  }
+  nav {
+    display: block;
+  }
+  .nav_toggle {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+  }
+  nav ul li {
+    margin-right: 1.3rem;
+    color: rgb(122, 117, 117);
+    cursor: pointer;
+  }
+  nav ul li:hover {
+    color: rgb(87, 83, 83);
+  }
+  button {
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  nav ul button a {
+    background-color: #ff9900;
+    border: none;
+    padding: 18px 24px;
+    font-size: 17px;
+    transition: 0.3s ease;
+  }
+  nav ul button a:hover {
+    background-color: #bd7407;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .blog_posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+  }
+  .cover_img {
+    height: 12rem;
+  }
+  .blog_posts div:first-child {
+    grid-column: span 3;
+    margin: 3rem 0 5rem;
+  }
+  .blog_posts div:first-child a {
+    display: flex;
+  }
+  .blog_posts div:first-child .cover_img {
+    width: 20rem;
+    height: 15rem;
+  }
+  .blog_posts div:first-child section {
+    padding-left: 1rem;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  header,
+  main {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .blog_posts {
+    column-gap: 2rem;
+  }
+  .blog_posts div:first-child .cover_img {
+    width: 27rem;
+    height: 20rem;
+  }
+  .blog_posts div:first-child section {
+    padding-left: 3.5rem;
+  }
 }
