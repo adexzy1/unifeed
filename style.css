@@ -25,6 +25,10 @@ header {
 nav {
   display: none;
 }
+.logo {
+  display: flex;
+  align-items: center;
+}
 
 /*==== Header section ======*/
 .blog_details {
