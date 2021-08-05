@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+}
+
+/*==== Header section ======*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+nav {
+  display: none;
+}
+
+/*==== Header section ======*/
+.blog_details {
+  margin-bottom: 3rem;
+}
+.blog_post img {
+  max-width: 100%;
+  padding-bottom: 1rem;
+}
+main {
+  padding: 0 1rem;
+}
+.blog_details p {
+  color: #494949;
+  line-height: 1.6rem;
+  padding-top: 1rem;
+}
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.author img {
+  width: 4.5rem;
+  padding-right: 1rem;
+  padding-bottom: 0;
+}
+footer {
+  padding: 1rem 1rem 1.5rem;
+}
